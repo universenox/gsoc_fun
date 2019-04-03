@@ -5,7 +5,6 @@
 #include <iostream>
 #include <cassert>
 #include <boost/type_traits.hpp>
-#include <type_traits>
 
 template<typename E> class matrix_expr { // expression template base class
 protected:
