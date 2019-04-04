@@ -3,13 +3,9 @@
 #include <chrono>
 #include <numeric>
 #include <cstdlib>
-#include<algorithm>
+#include <algorithm>
 
 using namespace std;
-
-template<typename T, typename L>
-matrix<T> matrix_generate(size_t size, L&& arg);
-
 
 int main()
 {
@@ -20,7 +16,7 @@ int main()
   vector<int> va (SIZE * SIZE);
   vector<int> vb (SIZE * SIZE);
 
-  // uses lambda function to generate each elem. of vector
+  // uses lambda function to generate each elem. of the matrix
   generate(va.begin(), va.end(), [&n, SIZE]() { return n = n - 3; });
   generate(vb.begin(), vb.end(), [&n, SIZE]() { return n = n + 11; });
 
@@ -67,7 +63,7 @@ int main()
   end = std::chrono::system_clock::now();
   time_taken = end - start;
   cout << "time taken: " << time_taken.count() << " seconds\n";
-
+  
 
   return 0;
 }
