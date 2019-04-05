@@ -181,7 +181,6 @@ matrix_sub<E1,E2> operator-=(E1 const& lhs, E2 const& rhs) {
 
 // multiplication expression
 // uses extremely inefficient algorithm
-// fails for something like x = A * x 
 //
 // uses template specializations to handle the differences between
 // matrix * matrix multiplication and matrix * scalar multiplication.
